@@ -1,0 +1,40 @@
+/* Dell Color Palette */
+// Primary Colors
+$dell-blue: #0076ce;
+$dell-midnight: #0076ce;
+// Accent Colors
+$dell-light-blue: #41b6e6;
+// Status Colors
+$dell-success: #67b953;
+$dell-pending: #ffc400;
+$dell-in-progress: #ff7828;
+$dell-error: #ff5656;
+// Neutral Colors
+$dell-dark-knight: #26262b;
+$dell-deep: #373845;
+$dell-pebble: #656677;
+$dell-davys-grey: #535360;
+$dell-grey: #808080;
+$dell-white: #fff;
+
+// Override Bootstrap Color Palette
+$blue: $dell-blue;
+// $indigo:  #6610f2 !default;
+// $purple:  #6f42c1 !default;
+// $pink:    #d63384 !default;
+$red: $dell-error;
+$orange: $dell-in-progress;
+$yellow: $dell-pending;
+$green: $dell-success;
+// $teal:    #20c997 !default;
+// $cyan:    #0dcaf0 !default;
+
+// Override Bootstrap Color Theme
+$primary: $dell-blue;
+$secondary: $dell-davys-grey;
+$success: $dell-success;
+$info: $dell-light-blue;
+$warning: $dell-pending;
+$danger: $dell-error;
+$light: $dell-grey;
+$dark: $dell-deep;

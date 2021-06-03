@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
+import { AppConfig } from './app.model';
+import { ConfigService } from './services/config.service';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +11,8 @@ import { filter } from 'rxjs/operators';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+  config: AppConfig;
+
   title = 'angular-boilerplate';
 
   // Get Child - Activated Route
@@ -31,9 +35,15 @@ export class AppComponent implements OnInit {
     });
   }
 
-  constructor(private Router: Router, private ActivatedRoute: ActivatedRoute, private Title: Title) {}
+  constructor(
+    private configService: ConfigService,
+    private Router: Router,
+    private ActivatedRoute: ActivatedRoute,
+    private Title: Title
+  ) {}
 
   ngOnInit(): void {
+    this.config = this.configService.readConfig();
     this.setPageTitle();
   }
 }
